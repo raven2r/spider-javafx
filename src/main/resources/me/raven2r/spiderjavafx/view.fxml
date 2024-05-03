@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.raven2r.spiderjavafx.Controller">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <WebView fx:id="webView" prefHeight="500.0" prefWidth="400.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></WebView>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="150.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <TextArea fx:id="urlTextArea" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" promptText="URL to start" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="visitsTextArea" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="Visits">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextArea>
+            <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="60.0" prefWidth="70.0" text="Start!" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <ProgressBar fx:id="progressBar" disable="true" prefWidth="200.0" progress="0.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <ListView fx:id="listView" prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></ListView>
+   </right>
+</BorderPane>
